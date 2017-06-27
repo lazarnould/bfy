@@ -25,7 +25,11 @@ module Bfy
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
-    # Don't generate system test files.
-    config.generators.system_tests = nil
+
+    config.generators do |generate|
+      generate.assets false
+      generate.helper false
+      generate.system_tests = nil
+    end
   end
 end
