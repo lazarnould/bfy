@@ -8,6 +8,7 @@ class ProjectsController < ApplicationController
 
   def create
     @project = Project.new(project_params)
+
     # if @project.images.nil?
     #   @project.pics = 0
     # else
@@ -41,6 +42,7 @@ class ProjectsController < ApplicationController
   end
 
   def show
+    @image = Image.new
   end
 
   private

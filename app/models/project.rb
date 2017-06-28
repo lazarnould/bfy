@@ -1,3 +1,3 @@
 class Project < ApplicationRecord
-  has_many :images, optional: true
+  has_many :images
 end
