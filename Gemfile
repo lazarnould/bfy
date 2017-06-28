@@ -12,6 +12,7 @@ gem 'pg'
 gem 'puma'
 gem 'rails', '5.1.2'
 gem 'redis'
+gem 'coffee-rails'
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
@@ -19,6 +20,8 @@ gem 'jquery-rails'
 gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
+
+
 group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'

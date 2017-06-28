@@ -8,11 +8,11 @@ class ProjectsController < ApplicationController
 
   def create
     @project = Project.new(project_params)
-    if @project.images.nil?
-      @project.pics = 0
-    else
-      @project.pics = @projects.images.count
-    end
+    # if @project.images.nil?
+    #   @project.pics = 0
+    # else
+    #   @project.pics = @projects.images.count
+    # end
 
     if @project.save
       flash[:notice] = "Un projet a été ajouté sur la plateforme"
@@ -45,7 +45,7 @@ class ProjectsController < ApplicationController
 
   private
 
-  def contact_params
+  def project_params
     params.require(:project).permit(:finished, :name, :city)
   end
 
