@@ -17,6 +17,6 @@ def new
   private
 
   def contact_params
-    params.require(:contact).permit(:email, :descritpion)
+    params.require(:contact).permit(:email, :description)
   end
 end
