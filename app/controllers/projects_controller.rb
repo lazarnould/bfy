@@ -9,11 +9,11 @@ class ProjectsController < ApplicationController
   def create
     @project = Project.new(project_params)
 
-    # if @project.images.nil?
-    #   @project.pics = 0
-    # else
-    #   @project.pics = @projects.images.count
-    # end
+    if @project.images.nil?
+      @project.pics = 0
+    else
+      @project.pics = @projects.images.count
+    end
 
     if @project.save
       flash[:notice] = "Un projet a été ajouté sur la plateforme"
